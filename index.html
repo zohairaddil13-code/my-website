@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f4">
+    <meta name="description" content="Explore a retail POS for checkout, products, inventory, combos, barcode labels, receipts, and offline selling.">
+    <title>HaadTech | Retail POS Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js?v=pointer-motion-2" defer></script>
+</head>
+<body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="HaadTech Retail POS home">
+            <img class="brand-logo" src="images/haadtech-logo.png" alt="">
+            <span>HaadTech<span class="brand-subtitle">RETAIL POINT OF SALE</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#features">Features</a>
+            <a href="#walkthrough">How it works</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#details">Details</a>
+        </nav>
+        <a class="button button-outline header-cta" href="#walkthrough">Explore the demo <span aria-hidden="true">→</span></a>
+    </header>
+
+    <main id="main">
+        <section class="hero section-wrap" id="top" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> MEET YOUR NEW RETAIL RHYTHM</p>
+                <h1 id="hero-title">Every sale.<br><span>One clear picture.</span></h1>
+                <p class="hero-lead">A thoughtfully connected point of sale for the people, products, and pace of your store.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#walkthrough">Explore the experience <span aria-hidden="true">→</span></a>
+                    <a class="text-link" href="#screenshots"><span class="play-icon" aria-hidden="true">↓</span> See it in action</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <span class="hero-orbit hero-orbit-one" data-pointer-depth="8" aria-hidden="true"></span>
+                <span class="hero-orbit hero-orbit-two" data-pointer-depth="14" aria-hidden="true"></span>
+                <div class="browser-frame">
+                    <div class="browser-bar"><span></span><span></span><span></span><b>HaadTech / Point of sale</b><i>YOUR STORE, IN FOCUS</i></div>
+                    <button class="image-trigger hero-image-trigger" type="button" data-image="images/point-of-sale.png" data-caption="Point of sale — An anonymized screenshot from the running app.">
+                        <img src="images/point-of-sale.png" alt="Anonymized Retail POS checkout screen showing product search, categories, and sale controls" fetchpriority="high">
+                    </button>
+                </div>
+                <div class="floating-note" data-pointer-depth="20"><span class="note-icon" aria-hidden="true">✓</span><span><b>One connected workflow</b><small>From first scan to final receipt.</small></span></div>
+                <div class="hero-float hero-float-left" data-pointer-depth="28"><span class="hero-float-icon" aria-hidden="true">⌕</span><span><b>Find it fast</b><small>Search · scan · sell</small></span></div>
+                <div class="hero-float hero-float-top" data-pointer-depth="16"><span class="hero-float-dot" aria-hidden="true"></span><span>BUILT FOR THE COUNTER</span></div>
+            </div>
+            <a class="scroll-cue" href="#features"><span>SCROLL TO EXPLORE</span><i aria-hidden="true"></i></a>
+        </section>
+
+        <section class="trust-strip" aria-label="Included workflows">
+            <div class="section-wrap trust-items">
+                <span>MADE FOR DAILY RETAIL</span><b>Checkout</b><i></i><b>Inventory</b><i></i><b>Combos</b><i></i><b>Barcodes</b><i></i><b>Offline mode</b>
+            </div>
+        </section>
+
+        <section class="section section-wrap" id="features" aria-labelledby="features-title">
+            <div class="section-heading">
+                <div><p class="eyebrow">EVERYDAY STORE OPERATIONS</p><h2 id="features-title">Everything your counter needs.<br><span>Nothing in the way.</span></h2></div>
+                <p>Keep the essentials close at hand, with tools designed around the way a retail store actually works.</p>
+            </div>
+            <div class="feature-grid">
+                <a class="feature-card" href="#checkout"><span class="feature-icon" aria-hidden="true">01</span><small>SELL</small><h3>Quick, flexible checkout</h3><p>Search or scan products, review the cart, apply a discount, take payment, and save the sale.</p><span class="card-link">Explore checkout <b aria-hidden="true">→</b></span></a>
+                <a class="feature-card" href="#catalog"><span class="feature-icon" aria-hidden="true">02</span><small>ORGANIZE</small><h3>Products &amp; barcodes</h3><p>Manage prices, SKUs, tax, categories, and labels. Import products in bulk when you need to.</p><span class="card-link">Explore the catalog <b aria-hidden="true">→</b></span></a>
+                <a class="feature-card" href="#combos"><span class="feature-icon" aria-hidden="true">03</span><small>BUNDLE</small><h3>Combos with stock tracking</h3><p>Create fixed-price bundles and track the component products included in every combo.</p><span class="card-link">Explore combos <b aria-hidden="true">→</b></span></a>
+                <a class="feature-card" href="#inventory"><span class="feature-icon" aria-hidden="true">04</span><small>REPLENISH</small><h3>Inventory &amp; purchasing</h3><p>Monitor stock, set reorder levels, receive purchase orders, and review supplier balances.</p><span class="card-link">Explore stock tools <b aria-hidden="true">→</b></span></a>
+                <a class="feature-card" href="#printing"><span class="feature-icon" aria-hidden="true">05</span><small>PRINT</small><h3>Receipts, tickets &amp; labels</h3><p>Print customer receipts and barcode labels, or route tickets to supported network printers.</p><span class="card-link">Explore printing <b aria-hidden="true">→</b></span></a>
+                <a class="feature-card" href="#offline"><span class="feature-icon" aria-hidden="true">06</span><small>STAY READY</small><h3>Keep checkout moving offline</h3><p>Use a prepared register and saved catalog during an outage, then review queued sales after reconnecting.</p><span class="card-link">Explore offline mode <b aria-hidden="true">→</b></span></a>
+            </div>
+        </section>
+
+        <section class="tour-section" id="walkthrough" aria-labelledby="tour-title">
+            <div class="section section-wrap">
+                <div class="section-heading">
+                    <div><p class="eyebrow">A HANDS-ON PRODUCT TOUR</p><h2 id="tour-title">See the workflow<br><span>come together.</span></h2></div>
+                    <p>Step through a sample store journey. The walkthrough is illustrative and does not connect to or change live store data.</p>
+                </div>
+                <div class="tour-shell" data-tour>
+                    <div class="tour-tabs" role="tablist" aria-label="Retail workflow">
+                        <button class="tour-tab is-active" type="button" role="tab" id="tab-sale" aria-selected="true" aria-controls="panel-sale" data-tour-tab="sale"><span>01</span> Checkout</button>
+                        <button class="tour-tab" type="button" role="tab" id="tab-combo" aria-selected="false" aria-controls="panel-combo" tabindex="-1" data-tour-tab="combo"><span>02</span> Combos</button>
+                        <button class="tour-tab" type="button" role="tab" id="tab-barcode" aria-selected="false" aria-controls="panel-barcode" tabindex="-1" data-tour-tab="barcode"><span>03</span> Barcodes</button>
+                        <button class="tour-tab" type="button" role="tab" id="tab-print" aria-selected="false" aria-controls="panel-print" tabindex="-1" data-tour-tab="print"><span>04</span> Printing</button>
+                        <button class="tour-tab" type="button" role="tab" id="tab-offline" aria-selected="false" aria-controls="panel-offline" tabindex="-1" data-tour-tab="offline"><span>05</span> Offline mode</button>
+                    </div>
+                    <div class="tour-content">
+                        <div class="tour-explanation" aria-live="polite">
+                            <p class="eyebrow" id="tour-kicker">STEP 01 · CHECKOUT</p>
+                            <h3 id="tour-heading">A smoother sale, start to finish.</h3>
+                            <p id="tour-description">Find products by name, SKU, or barcode. Build the cart, review the total, choose a payment method, and complete checkout.</p>
+                            <ol id="tour-steps"><li>Search or scan a product.</li><li>Review items, customer, discount, and tax.</li><li>Choose payment and complete the sale.</li></ol>
+                            <div class="tour-controls">
+                                <button class="button button-small button-outline" type="button" data-tour-prev aria-label="Previous step">←</button>
+                                <span id="tour-progress" aria-live="polite">01 / 05</span>
+                                <button class="button button-small button-outline" type="button" data-tour-next>Next <span aria-hidden="true">→</span></button>
+                                <button class="auto-play" type="button" data-tour-play aria-pressed="false">Play tour</button>
+                            </div>
+                        </div>
+                        <div class="tour-screen-wrap">
+                            <div class="tour-screen" id="panel-sale" role="tabpanel" aria-labelledby="tab-sale" data-tour-panel="sale">
+                                <div class="screen-top"><span>retail / point of sale</span><b>REGISTER</b></div>
+                                <div class="sale-screen">
+                                    <div class="sale-catalog"><small>PRODUCTS</small><div class="search-mock">⌕ &nbsp; Search or scan products</div><div class="category-pills"><i>All products</i><i>Popular</i><i>New</i></div><div class="mini-products"><div><span>01</span><b>Sample item</b><small>PKR 1,200</small></div><div><span>02</span><b>Sample item</b><small>PKR 850</small></div><div><span>03</span><b>Sample item</b><small>PKR 640</small></div></div></div>
+                                    <div class="sale-cart"><small>CURRENT SALE</small><p>Sample item <span>1 × PKR 1,200</span></p><p>Sample item <span>1 × PKR 850</span></p><div class="sale-total"><b>Total</b><strong>PKR 2,050</strong></div><button type="button" tabindex="-1">Continue to payment</button></div>
+                                </div>
+                            </div>
+                            <div class="tour-screen" id="panel-combo" role="tabpanel" aria-labelledby="tab-combo" data-tour-panel="combo" hidden>
+                                <div class="screen-top"><span>retail / combos</span><b>BUNDLE BUILDER</b></div>
+                                <div class="illustration-screen"><small>FIXED-PRICE BUNDLE</small><h4>Build a bundle that works together.</h4><div class="bundle-mock"><div><b>Sample item A</b><span>Quantity <strong>1</strong></span></div><b class="plus">+</b><div><b>Sample item B</b><span>Quantity <strong>2</strong></span></div></div><div class="bundle-price"><span>Bundle selling price</span><b>PKR 2,400</b></div><p>Availability follows the stock of its component products.</p></div>
+                            </div>
+                            <div class="tour-screen" id="panel-barcode" role="tabpanel" aria-labelledby="tab-barcode" data-tour-panel="barcode" hidden>
+                                <div class="screen-top"><span>retail / product labels</span><b>BARCODE</b></div>
+                                <div class="illustration-screen"><small>PRODUCT LABEL</small><h4>Create a scan-ready label.</h4><div class="label-mock"><b>Sample product</b><div class="barcode-bars" aria-hidden="true"></div><code>2 000000 000017</code><span>Internal-use example barcode</span></div><p>Print at actual size on matching label stock. Generated internal codes are not GS1-issued identifiers.</p></div>
+                            </div>
+                            <div class="tour-screen" id="panel-print" role="tabpanel" aria-labelledby="tab-print" data-tour-panel="print" hidden>
+                                <div class="screen-top"><span>retail / print setup</span><b>PRINTERS</b></div>
+                                <div class="illustration-screen"><small>PRINT OPTIONS</small><h4>Send the right print to the right place.</h4><div class="print-option"><span>Receipt printer</span><b>Cashier receipt</b></div><div class="print-option"><span>Label printer</span><b>Product barcode</b></div><div class="print-option"><span>Kitchen printer</span><b>Order ticket</b></div><p>Use browser printing or configure a supported network printer through the Print Bridge.</p></div>
+                            </div>
+                            <div class="tour-screen" id="panel-offline" role="tabpanel" aria-labelledby="tab-offline" data-tour-panel="offline" hidden>
+                                <div class="screen-top"><span>retail / offline register</span><b>DEVICE READY</b></div>
+                                <div class="illustration-screen"><small>OFFLINE CHECKOUT</small><h4>Keep serving when the connection drops.</h4><div class="offline-steps"><div class="is-done"><b>1</b><span>Prepare the register online</span><i>Done</i></div><div class="is-done"><b>2</b><span>Save sales on this device</span><i>Queued</i></div><div><b>3</b><span>Reconnect and sync</span><i>Next</i></div></div><p>Use the same device and browser. Keep pending sales until the server confirms the sync.</p></div>
+                            </div>
+                            <p class="sample-note">Illustrative sample data · No live store information</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-wrap" id="screenshots" aria-labelledby="screenshots-title">
+            <div class="section-heading">
+                <div><p class="eyebrow">REAL APPLICATION SCREENS</p><h2 id="screenshots-title">A closer look<br><span>at the product.</span></h2></div>
+                <p>Captured from the running application. Store-specific account and product details are anonymized. Select any image to enlarge it.</p>
+            </div>
+            <div class="screenshot-grid">
+                <figure class="screenshot-card screenshot-card-wide">
+                    <button class="image-trigger" type="button" data-image="images/point-of-sale.png" data-caption="Point of sale — Product search, sale cart, and checkout controls."><img src="images/point-of-sale.png" alt="Anonymized point of sale screen with search, product categories, and cart" loading="lazy"></button>
+                    <figcaption><b>Point of sale</b><span>Search, scan, review the cart, and check out.</span></figcaption>
+                </figure>
+                <figure class="screenshot-card">
+                    <button class="image-trigger" type="button" data-image="images/products.png" data-caption="Products — Product catalog with anonymized sample rows."><img src="images/products.png" alt="Product catalog screenshot with generic sample products and hidden store data" loading="lazy"></button>
+                    <figcaption><b>Product catalog</b><span>Product records, SKUs, prices, and labels.</span></figcaption>
+                </figure>
+                <figure class="screenshot-card">
+                    <button class="image-trigger" type="button" data-image="images/inventory.png" data-caption="Inventory — Stock levels and reorder information with anonymized sample data."><img src="images/inventory.png" alt="Inventory management screenshot with generic sample stock rows" loading="lazy"></button>
+                    <figcaption><b>Inventory</b><span>Stock on hand, reorder levels, and stock value.</span></figcaption>
+                </figure>
+                <figure class="screenshot-card">
+                    <button class="image-trigger" type="button" data-image="images/combos.png" data-caption="Combos — Bundle products and sample components."><img src="images/combos.png" alt="Product combo screen showing sample bundles and generic component products" loading="lazy"></button>
+                    <figcaption><b>Product combos</b><span>Fixed-price bundles and their components.</span></figcaption>
+                </figure>
+                <figure class="screenshot-card">
+                    <button class="image-trigger" type="button" data-image="images/purchases.png" data-caption="Purchases — Supplier orders, receiving, and balance controls."><img src="images/purchases.png" alt="Purchases screen showing supplier order management, stock received, and filters" loading="lazy"></button>
+                    <figcaption><b>Purchases</b><span>Supplier orders, receiving, and payment tracking.</span></figcaption>
+                </figure>
+            </div>
+            <p class="privacy-note"><span aria-hidden="true">i</span> Screenshots use generic sample names. Real customer, staff, and account details are not part of this demo.</p>
+        </section>
+
+        <section class="detail-section" id="details" aria-labelledby="details-title">
+            <div class="section section-wrap">
+                <div class="section-heading">
+                    <div><p class="eyebrow">THE DETAILS THAT MATTER</p><h2 id="details-title">Built around<br><span>real store routines.</span></h2></div>
+                    <p>Explore how each part works, then open the full task notes for setup and operating guidance.</p>
+                </div>
+                <div class="detail-grid">
+                    <article class="detail-card" id="checkout"><span class="detail-number">01</span><p class="eyebrow">AT THE COUNTER</p><h3>Sales, payments &amp; returns</h3><p>Look up products by name, SKU, or barcode. Select a walk-in customer or a saved customer, apply eligible discounts, take configured payments, and print or reprint invoices. Hold an unpaid order to resume it later. Return eligible quantities against the original sale.</p><a href="#faq-sales">Read checkout notes <span aria-hidden="true">→</span></a></article>
+                    <article class="detail-card" id="catalog"><span class="detail-number">02</span><p class="eyebrow">PRODUCT CATALOG</p><h3>Products &amp; barcode labels</h3><p>Store each item's name, unique SKU, category, unit, cost, selling price, tax, opening quantity, and low-stock threshold. Scan a supplier barcode or generate a unique internal EAN-13, then print a test label at actual size. Bulk import supports up to 500 records per file.</p><a href="#faq-barcodes">Read barcode notes <span aria-hidden="true">→</span></a></article>
+                    <article class="detail-card" id="combos"><span class="detail-number">03</span><p class="eyebrow">BUNDLES &amp; SAVINGS</p><h3>Combos &amp; promotions</h3><p>Combine at least two active products in a fixed-price combo. Component availability determines bundle availability, and sales deduct the included quantities. Set percentage, fixed-amount, or Buy X Get Y deals for a sale, category, or selected products.</p><a href="#faq-combos">Read combo notes <span aria-hidden="true">→</span></a></article>
+                    <article class="detail-card" id="inventory"><span class="detail-number">04</span><p class="eyebrow">STOCK CONTROL</p><h3>Inventory &amp; supplier orders</h3><p>Track stock by location, set reorder thresholds, record authorized adjustments, and use bulk stock tools. Create purchase orders, receive deliveries in stages, record supplier payments, and return goods for supplier credit.</p><a href="#faq-inventory">Read inventory notes <span aria-hidden="true">→</span></a></article>
+                    <article class="detail-card" id="printing"><span class="detail-number">05</span><p class="eyebrow">PRINT &amp; DEVICES</p><h3>Receipts, labels &amp; printers</h3><p>Use the browser print dialog for invoices and barcode labels. For network printing, configure the local Print Bridge and a supported printer for cashier receipts, store copies, or kitchen tickets. Test the device and keep manual printing available as a fallback.</p><a href="#faq-printing">Read printing notes <span aria-hidden="true">→</span></a></article>
+                    <article class="detail-card" id="offline"><span class="detail-number">06</span><p class="eyebrow">OUTAGE-READY</p><h3>Offline register &amp; sync</h3><p>While online, prepare the register and save the catalog on its device. During an outage, use the same browser and device to create queued sales. Reconnect and review the pending queue; never clear browser data while sales are waiting to sync.</p><a href="#faq-offline">Read offline safety notes <span aria-hidden="true">→</span></a></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-wrap" id="setup" aria-labelledby="setup-title">
+            <div class="section-heading">
+                <div><p class="eyebrow">A STRAIGHTFORWARD START</p><h2 id="setup-title">From first setup<br><span>to a confident checkout.</span></h2></div>
+                <p>Start with the store basics, prepare the catalog, and give your team the right access.</p>
+            </div>
+            <ol class="setup-steps">
+                <li><span>01</span><div><b>Set up your store</b><p>Choose the location, configure payment options, and set user roles.</p></div></li>
+                <li><span>02</span><div><b>Add products and opening stock</b><p>Enter products, prices, tax, SKUs, barcodes, and stock thresholds.</p></div></li>
+                <li><span>03</span><div><b>Prepare the register</b><p>Set up shifts, printers, and the offline catalog if your workflow needs them.</p></div></li>
+                <li><span>04</span><div><b>Sell and review</b><p>Complete sales, manage returns, and use reports to review store activity.</p></div></li>
+            </ol>
+        </section>
+
+        <section class="faq-section" id="faqs" aria-labelledby="faq-title">
+            <div class="section section-wrap faq-layout">
+                <div><p class="eyebrow">GOOD TO KNOW</p><h2 id="faq-title">A few useful<br><span>answers.</span></h2><p class="faq-intro">Practical notes for common setup and day-to-day questions.</p></div>
+                <div class="faq-list">
+                    <details id="faq-sales"><summary>Can I hold a sale and finish it later?<span aria-hidden="true">+</span></summary><p>Yes. Hold an unpaid order and open Held orders to review and resume it. A held order is not a completed sale and does not charge a customer.</p></details>
+                    <details id="faq-barcodes"><summary>Can I create and print barcode labels?<span aria-hidden="true">+</span></summary><p>Yes. Use an existing product barcode or generate an internal EAN-13. Print a test label at actual size on matching paper. Generated codes are internal-use identifiers, not GS1-issued global barcodes.</p></details>
+                    <details id="faq-combos"><summary>What happens to stock when a combo sells?<span aria-hidden="true">+</span></summary><p>The sale deducts the configured quantities of the component products. Restock the components to make more bundles available.</p></details>
+                    <details id="faq-inventory"><summary>Can I receive a supplier order in multiple deliveries?<span aria-hidden="true">+</span></summary><p>Yes. Purchase orders support staged receiving, so you can record deliveries as they arrive and track supplier balances.</p></details>
+                    <details id="faq-printing"><summary>Which printers can I use?<span aria-hidden="true">+</span></summary><p>Browser printing works with printers installed on the register device. Network jobs can be routed through the local Print Bridge to supported ESC/POS printers on a trusted private network. Confirm physical output with a test print.</p></details>
+                    <details id="faq-offline"><summary>How does offline checkout work safely?<span aria-hidden="true">+</span></summary><p>Prepare the register while online, use the same device and browser during an outage, then reconnect and review pending sales before syncing. Do not clear browser data while sales are pending. Offline sales use the cached catalog; promotions and customer lookup may be unavailable.</p></details>
+                    <details><summary>Can team access be limited by role?<span aria-hidden="true">+</span></summary><p>Administrators can create staff accounts and grant permissions to the relevant store tools. Available screens and actions depend on each user's assigned access.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <section class="closing section-wrap">
+            <div><p class="eyebrow">A CALMER COUNTER STARTS HERE</p><h2>See how your store<br><span>could run.</span></h2><p>Explore the workflows, screenshots, and setup notes at your own pace.</p></div>
+            <a class="button button-light" href="#top">Back to the top <span aria-hidden="true">↑</span></a>
+        </section>
+    </main>
+
+    <footer class="site-footer section-wrap">
+        <a class="brand" href="#top" aria-label="HaadTech Retail POS home"><img class="brand-logo" src="images/haadtech-logo.png" alt=""><span>HaadTech<span class="brand-subtitle">RETAIL POINT OF SALE</span></span></a>
+        <span>© 2026 HaadTech. All rights reserved. · Illustrative product tour · Sample values only</span>
+        <a href="#faqs">Questions &amp; answers ↑</a>
+    </footer>
+
+    <dialog class="image-dialog" aria-label="Enlarged product screenshot">
+        <form method="dialog"><button class="dialog-close" aria-label="Close screenshot">×</button></form>
+        <img alt="">
+        <p></p>
+    </dialog>
+</body>
+</html>
