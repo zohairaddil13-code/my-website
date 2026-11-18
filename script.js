@@ -1,6 +1,66 @@
 (() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const supportsCustomCursor = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     const scrollProgress = document.querySelector('.scroll-progress > span');
+
+    if (!prefersReducedMotion && supportsCustomCursor) {
+        const cursor = document.querySelector('.custom-cursor');
+        const aura = cursor?.querySelector('.custom-cursor-aura');
+
+        if (cursor instanceof HTMLElement && aura instanceof HTMLElement) {
+            document.body.classList.add('has-custom-cursor');
+            let pointerX = 0;
+            let pointerY = 0;
+            let auraX = 0;
+            let auraY = 0;
+            let cursorFrame = 0;
+
+            const moveCursor = () => {
+                auraX += (pointerX - auraX) * .14;
+                auraY += (pointerY - auraY) * .14;
+                cursor.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0)`;
+                aura.style.transform = `translate3d(${(auraX - pointerX).toFixed(1)}px, ${(auraY - pointerY).toFixed(1)}px, 0) translate3d(-50%, -50%, 0)`;
+
+                if (Math.abs(pointerX - auraX) > .5 || Math.abs(pointerY - auraY) > .5) {
+                    cursorFrame = window.requestAnimationFrame(moveCursor);
+                } else {
+                    auraX = pointerX;
+                    auraY = pointerY;
+                    cursorFrame = 0;
+                }
+            };
+
+            document.addEventListener('pointermove', event => {
+                if (event.pointerType !== 'mouse') return;
+
+                const target = event.target;
+                if (
+                    target instanceof Element &&
+                    target.closest('input, textarea, select, [contenteditable="true"], video, iframe')
+                ) {
+                    cursor.classList.remove('is-visible', 'is-interactive');
+                    return;
+                }
+
+                pointerX = event.clientX;
+                pointerY = event.clientY;
+                cursor.classList.add('is-visible');
+                cursor.classList.toggle(
+                    'is-interactive',
+                    target instanceof Element &&
+                    Boolean(target.closest('a, button, summary, [role="button"], .image-trigger'))
+                );
+
+                if (!cursorFrame) {
+                    cursorFrame = window.requestAnimationFrame(moveCursor);
+                }
+            }, { passive: true });
+
+            document.documentElement.addEventListener('pointerleave', () => {
+                cursor.classList.remove('is-visible', 'is-interactive');
+            });
+        }
+    }
 
     if (scrollProgress) {
         let progressFrame = 0;
@@ -81,7 +141,7 @@
     }
 
     const revealTargets = document.querySelectorAll(
-        '.section-heading, .feature-card, .tour-shell, .screenshot-card, .privacy-note, .detail-card, .setup-steps > li, .faq-list details, .closing'
+        '.section-heading, .feature-card, .tour-shell, .demo-video-card, .demo-video-chapters, .screenshot-card, .privacy-note, .detail-card, .setup-steps > li, .faq-list details, .closing'
     );
 
     if (!prefersReducedMotion && 'IntersectionObserver' in window) {
@@ -97,6 +157,46 @@
             element.classList.add('scroll-reveal');
             element.style.setProperty('--reveal-delay', `${(index % 3) * 90}ms`);
             revealObserver.observe(element);
+        });
+    }
+
+    const demoVideo = document.querySelector('[data-demo-video]');
+    if (demoVideo instanceof HTMLVideoElement) {
+        const videoFrame = demoVideo.closest('.demo-video-frame');
+        const playCover = videoFrame?.querySelector('[data-video-play]');
+        const playError = videoFrame?.querySelector('[data-video-error]');
+
+        if (playCover instanceof HTMLButtonElement && playError instanceof HTMLElement) {
+            demoVideo.addEventListener('playing', () => {
+                playCover.classList.add('is-dismissed');
+                window.setTimeout(() => {
+                    playCover.hidden = true;
+                }, 250);
+            }, { once: true });
+
+            playCover.addEventListener('click', () => {
+                playError.hidden = true;
+                demoVideo.play().catch(error => {
+                    playError.hidden = false;
+                    if (error.name !== 'NotAllowedError') {
+                        console.error('Unable to play the Retail POS demo video.', error);
+                    }
+                });
+            });
+        }
+
+        document.querySelectorAll('[data-video-time]').forEach(button => {
+            button.addEventListener('click', () => {
+                const seekToChapter = () => {
+                    demoVideo.currentTime = Number(button.dataset.videoTime);
+                };
+
+                if (demoVideo.readyState >= HTMLMediaElement.HAVE_METADATA) {
+                    seekToChapter();
+                } else {
+                    demoVideo.addEventListener('loadedmetadata', seekToChapter, { once: true });
+                }
+            });
         });
     }
 

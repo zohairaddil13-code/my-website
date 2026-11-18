@@ -7,11 +7,16 @@
     <meta name="description" content="Explore a retail POS for checkout, products, inventory, combos, barcode labels, receipts, and offline selling.">
     <title>HaadTech | Retail POS Demo</title>
     <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js?v=pointer-motion-2" defer></script>
+    <link rel="stylesheet" href="styles.css?v=cursor-aura-2">
+    <script src="script.js?v=cursor-aura-2" defer></script>
 </head>
 <body>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="custom-cursor" aria-hidden="true">
+        <span class="custom-cursor-aura"></span>
+        <span class="custom-cursor-ring"></span>
+        <span class="custom-cursor-dot"></span>
+    </div>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
         <a class="brand" href="#top" aria-label="HaadTech Retail POS home">
@@ -21,6 +26,7 @@
         <nav class="main-nav" aria-label="Main navigation">
             <a href="#features">Features</a>
             <a href="#walkthrough">How it works</a>
+            <a href="#video-demo">Demo video</a>
             <a href="#screenshots">Screenshots</a>
             <a href="#details">Details</a>
         </nav>
@@ -133,6 +139,53 @@
             </div>
         </section>
 
+        <section class="demo-video-section" id="video-demo" aria-labelledby="video-demo-title">
+            <div class="section section-wrap">
+                <div class="section-heading">
+                    <div><p class="eyebrow">THE RETAIL POS, IN ACTION</p><h2 id="video-demo-title">A closer look at<br><span>your everyday workflow.</span></h2></div>
+                    <p>Follow a complete store journey, from the first checkout to stock control and reporting.</p>
+                </div>
+                <div class="demo-video-layout">
+                    <figure class="demo-video-card">
+                        <div class="demo-video-topbar">
+                            <span class="demo-video-brand"><img src="images/haadtech-logo.png" alt=""><span>HAADTECH<small>RETAIL POINT OF SALE</small></span></span>
+                            <span class="demo-video-badge">PRODUCT TOUR <b>2:33</b></span>
+                        </div>
+                        <div class="demo-video-frame">
+                            <video data-demo-video controls preload="metadata" playsinline poster="images/retail-pos-video-poster.jpg" aria-label="HaadTech Retail POS product walkthrough">
+                                <source src="videos/retail-pos-demo-enhanced.mp4" type="video/mp4">
+                                Your browser does not support video playback. <a href="videos/retail-pos-demo-enhanced.mp4">Download the demo video</a>.
+                            </video>
+                            <button class="demo-video-cover" type="button" data-video-play aria-label="Play the HaadTech Retail POS walkthrough">
+                                <img src="images/retail-pos-video-poster.jpg" alt="">
+                                <span class="demo-video-play-pill"><span aria-hidden="true">▶</span> Play walkthrough</span>
+                            </button>
+                            <p class="demo-video-error" data-video-error role="status" hidden>Video playback could not start. Please try again with the player controls.</p>
+                        </div>
+                        <figcaption>
+                            <span>Full product walkthrough</span>
+                            <a href="videos/retail-pos-demo-enhanced.mp4" download>Download video <span aria-hidden="true">↓</span></a>
+                        </figcaption>
+                    </figure>
+                    <aside class="demo-video-chapters" aria-label="Video chapters">
+                        <p class="eyebrow">JUMP TO A CHAPTER</p>
+                        <h3>See what matters<br>to your store.</h3>
+                        <p class="demo-video-hint">Choose a point in the walkthrough.</p>
+                        <ol>
+                            <li><button type="button" data-video-time="6" aria-label="Go to Store overview, 0 minutes 6 seconds"><span>01</span><b>Store overview</b><time>0:06</time></button></li>
+                            <li><button type="button" data-video-time="33" aria-label="Go to Checkout and sales, 0 minutes 33 seconds"><span>02</span><b>Checkout &amp; sales</b><time>0:33</time></button></li>
+                            <li><button type="button" data-video-time="73" aria-label="Go to Receipts and returns, 1 minute 13 seconds"><span>03</span><b>Receipts &amp; returns</b><time>1:13</time></button></li>
+                            <li><button type="button" data-video-time="89" aria-label="Go to Product catalog, 1 minute 29 seconds"><span>04</span><b>Product catalog</b><time>1:29</time></button></li>
+                            <li><button type="button" data-video-time="97" aria-label="Go to Inventory and purchases, 1 minute 37 seconds"><span>05</span><b>Inventory &amp; purchases</b><time>1:37</time></button></li>
+                            <li><button type="button" data-video-time="121" aria-label="Go to Cash shifts and reports, 2 minutes 1 second"><span>06</span><b>Cash shifts &amp; reports</b><time>2:01</time></button></li>
+                            <li><button type="button" data-video-time="139" aria-label="Go to Printer setup, 2 minutes 19 seconds"><span>07</span><b>Printer setup</b><time>2:19</time></button></li>
+                        </ol>
+                        <p class="demo-video-note">A guided tour of the app using sample store data.</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
         <section class="section section-wrap" id="screenshots" aria-labelledby="screenshots-title">
             <div class="section-heading">
                 <div><p class="eyebrow">REAL APPLICATION SCREENS</p><h2 id="screenshots-title">A closer look<br><span>at the product.</span></h2></div>
@@ -217,6 +270,11 @@
     <footer class="site-footer section-wrap">
         <a class="brand" href="#top" aria-label="HaadTech Retail POS home"><img class="brand-logo" src="images/haadtech-logo.png" alt=""><span>HaadTech<span class="brand-subtitle">RETAIL POINT OF SALE</span></span></a>
         <span>© 2026 HaadTech. All rights reserved. · Illustrative product tour · Sample values only</span>
+        <nav class="social-links" aria-label="HaadTech social media">
+            <a href="https://www.linkedin.com/company/haadtechnology/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://wa.me/c/923293076545" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://www.facebook.com/profile.php?id=61596844193184&amp;sk=about&amp;viewas=100000686899395" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </nav>
         <a href="#faqs">Questions &amp; answers ↑</a>
     </footer>
 
