@@ -1694,6 +1694,69 @@ button { color: inherit; }
     transform: translateY(-1px);
 }
 
+.whatsapp-float {
+    position: fixed;
+    z-index: 80;
+    isolation: isolate;
+    right: 24px;
+    bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    display: inline-flex;
+    min-height: 54px;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 17px 7px 8px;
+    border: 1px solid #ffffffa6;
+    border-radius: 999px;
+    background: #20bd5a;
+    box-shadow: 0 8px 26px #123c2340, 0 2px 6px #163a2424;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
+.whatsapp-float::before {
+    position: absolute;
+    z-index: -1;
+    inset: -5px;
+    border: 1px solid #20bd5a6e;
+    border-radius: inherit;
+    content: "";
+    animation: whatsapp-pulse 2.4s ease-out infinite;
+}
+
+.whatsapp-float > svg {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 37px;
+    height: 37px;
+    flex: none;
+    padding: 7px;
+    border-radius: 50%;
+    background: #ffffff20;
+}
+
+.whatsapp-float > span { position: relative; z-index: 1; padding-right: 2px; }
+
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+    transform: translateY(-3px);
+    background: #159e49;
+    box-shadow: 0 12px 30px #123c2352, 0 2px 6px #163a2424;
+}
+
+.whatsapp-float:focus-visible {
+    outline: 3px solid #dfc16c;
+    outline-offset: 4px;
+}
+
+@keyframes whatsapp-pulse {
+    0% { opacity: .7; transform: scale(.96); }
+    75%, 100% { opacity: 0; transform: scale(1.13); }
+}
+
 .image-dialog {
     width: min(1120px, calc(100% - 32px));
     max-height: calc(100% - 32px);
@@ -1889,6 +1952,8 @@ button { color: inherit; }
     .site-footer > a:last-child { font-size: 8px; }
     .site-footer .social-links { order: 3; width: 100%; justify-content: center; }
     .site-footer .social-links a { font-size: 9px; }
+    .whatsapp-float { right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); min-height: 50px; padding-right: 14px; }
+    .whatsapp-float > svg { width: 34px; height: 34px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1909,4 +1974,6 @@ button { color: inherit; }
     .hero-visual [data-pointer-depth] {
         translate: none !important;
     }
+
+    .whatsapp-float::before { animation: none; }
 }
